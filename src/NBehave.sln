@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{32A51014-8E9C-49F1-9CDF-A39CE01EAFA1}"
 	ProjectSection(SolutionItems) = preProject
 		..\artifacts.ps1 = ..\artifacts.ps1
@@ -97,9 +97,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{8757BAB5
 		..\nuget\NBehave.Spec.MsTest.nuspec = ..\nuget\NBehave.Spec.MsTest.nuspec
 		..\nuget\NBehave.Spec.NUnit.nuspec = ..\nuget\NBehave.Spec.NUnit.nuspec
 		..\nuget\NBehave.Spec.XUnit.nuspec = ..\nuget\NBehave.Spec.XUnit.nuspec
+		..\nuget\NBehave.Vs2012Plugin.nuspec = ..\nuget\NBehave.Vs2012Plugin.nuspec
 		..\nuget\NBehave.VsPlugin.nuspec = ..\nuget\NBehave.VsPlugin.nuspec
-		..\nuget.ps1 = ..\nuget.ps1
 		..\nuget\ReSharper.feature = ..\nuget\ReSharper.feature
+		..\nuget\VsPlugin.scripts\UnInstall.ps1 = ..\nuget\VsPlugin.scripts\UnInstall.ps1
+		..\nuget\Vs2012Plugin.feature = ..\nuget\Vs2012Plugin.feature
 		..\nuget\VsPlugin.feature = ..\nuget\VsPlugin.feature
 	EndProjectSection
 EndProject
@@ -112,6 +114,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBehave.Resharper7.01.Plugin", "NBehave.Resharper701.Plugin\NBehave.Resharper7.01.Plugin.csproj", "{C89D5A65-98CA-4B18-A9F0-156524E3A7A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBehave.Resharper7.1.Plugin", "NBehave.Resharper71.Plugin\NBehave.Resharper7.1.Plugin.csproj", "{592B104D-C1E8-498D-BD48-ACBD0E3EA7B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VS2012.plugin", "VS2012.plugin", "{DD28B401-37F4-443A-A754-CB7426CD9D3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NBehave.VS2012.Plugin", "NBehave.VS2012.Plugin\NBehave.VS2012.Plugin.csproj", "{A06C1950-6294-431C-A646-0F7B1064BE98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -738,6 +744,26 @@ Global
 		{592B104D-C1E8-498D-BD48-ACBD0E3EA7B2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{592B104D-C1E8-498D-BD48-ACBD0E3EA7B2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{592B104D-C1E8-498D-BD48-ACBD0E3EA7B2}.Release|x86.ActiveCfg = Release|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-3.5|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-3.5|Any CPU.Build.0 = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-3.5|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-3.5|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-3.5|x86.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-4.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-4.0|Any CPU.Build.0 = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-4.0|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-4.0|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.AutomatedDebug-4.0|x86.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A06C1950-6294-431C-A646-0F7B1064BE98}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -774,6 +800,7 @@ Global
 		{C192A6DE-D254-4A69-8232-D4FF298E514E} = {4A5E0FD3-7225-4AA1-A3AB-E27CADF30896}
 		{C89D5A65-98CA-4B18-A9F0-156524E3A7A5} = {4A5E0FD3-7225-4AA1-A3AB-E27CADF30896}
 		{592B104D-C1E8-498D-BD48-ACBD0E3EA7B2} = {4A5E0FD3-7225-4AA1-A3AB-E27CADF30896}
+		{A06C1950-6294-431C-A646-0F7B1064BE98} = {DD28B401-37F4-443A-A754-CB7426CD9D3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		CodeStyleEnforcer_Active = 0
